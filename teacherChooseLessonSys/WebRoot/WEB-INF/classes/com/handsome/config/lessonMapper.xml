@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="lesson">
+
+	<select id="selectLessonByName" parameterType="java.lang.String" resultType="com.handsome.po.Lesson">
+		SELECT * FROM class WHERE ClassName = #{value}
+	</select>
+	
+	<select id="selectAllLesson" parameterType="String" resultType="com.handsome.po.Lesson">
+		SELECT * FROM class
+	</select>
+</mapper>
